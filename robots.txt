@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://youngsgym-sanbon2.vercel.app/sitemap.xml
