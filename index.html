@@ -173,6 +173,20 @@ footer b{color:var(--y)}
 .ev-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .ev-chips span{font-size:15px;font-weight:700;color:#ddd;border:1px solid var(--line);border-radius:8px;padding:8px 13px;background:rgba(255,255,255,.04)}
 .ev-note{margin:14px 0 0;font-size:14px;color:var(--mu)}
+.ev-card{min-height:0;padding-bottom:18px}
+.ev-body{padding:22px 0 6px;justify-content:center}
+.ev-card.wide{margin-top:16px}
+.ev-card.wide .ev-body{flex-direction:row;justify-content:center;align-items:center;gap:0;padding:22px 0 6px}
+.ev-card.wide .ev-pack,.ev-card.wide .ev-pricebox{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ev-card.wide .ev-pack{border-right:2px dashed #e3d3c4;padding:6px 10px}
+.ev-card.wide .ev-pricebox{padding:6px 10px}
+.ev-card.wide .a{font-size:clamp(26px,3.4vw,36px);font-weight:900;color:#241c19;line-height:1.2}
+.ev-card.wide .b{font-size:clamp(46px,6.4vw,76px);font-weight:900;color:#241c19;letter-spacing:-.01em;line-height:1.1;margin-top:6px;white-space:nowrap}
+.ev-card.wide .b em{font-style:normal;color:#c8312a}
+.ev-card.wide .t{font-size:clamp(26px,3.4vw,36px);font-weight:900;color:#241c19;line-height:1.2}
+.ev-card.wide .ev-price{font-size:clamp(52px,7.4vw,88px);margin-top:6px;white-space:nowrap;line-height:1.1}
+.ev-card.wide .ev-price small{font-size:.42em}
+@media(max-width:860px){.ev-card.wide .ev-body{flex-direction:column}.ev-card.wide .ev-pack{border-right:0;border-bottom:2px dashed #e3d3c4;padding:4px 10px 18px;width:100%}.ev-card.wide .ev-pricebox{padding-top:18px;width:100%}}
 @media(max-width:860px){.ev-grid{grid-template-columns:1fr}.ev-card{min-height:0}.ev-banner{padding:20px}}
 
 /* 로고 3D 회전 (고급 연출) */
@@ -265,8 +279,8 @@ footer b{color:var(--y)}
       <div class="ev-card">
         <div class="ev-head"><span>① EVENT</span></div>
         <div class="ev-body">
-          <div class="ev-desc" style="font-size:clamp(24px,3vw,30px);font-weight:900;color:#241c19;white-space:nowrap">리뷰 작성 시</div>
-          <div class="ev-price" style="font-size:clamp(84px,11vw,110px);margin-top:4px">5<small style="font-size:38px">% 할인</small></div>
+          <div class="ev-desc" style="font-size:clamp(26px,3vw,34px);font-weight:900;color:#241c19;white-space:nowrap">리뷰 작성 시</div>
+          <div class="ev-price" style="font-size:clamp(84px,10.2vw,108px);margin-top:6px;line-height:1;white-space:nowrap">5<small style="font-size:36px">% 할인</small></div>
         </div>
       </div>
 
@@ -274,17 +288,32 @@ footer b{color:var(--y)}
         <div class="ev-head"><span>② EVENT</span></div>
         <span class="ev-best">BEST</span>
         <div class="ev-body">
-          <div class="ev-desc" style="font-size:clamp(24px,3vw,30px);font-weight:900;color:#241c19;white-space:nowrap">동반 리뷰 작성 시</div>
-          <div class="ev-price" style="font-size:clamp(84px,11vw,110px);margin-top:4px">10<small style="font-size:38px">% 할인</small></div>
+          <div class="ev-desc" style="font-size:clamp(26px,3vw,34px);font-weight:900;color:#241c19;white-space:nowrap">동반 리뷰 작성 시</div>
+          <div class="ev-price" style="font-size:clamp(84px,10.2vw,108px);margin-top:6px;line-height:1;white-space:nowrap">10<small style="font-size:36px">% 할인</small></div>
         </div>
       </div>
 
       <div class="ev-card">
         <div class="ev-head"><span>③ EVENT</span></div>
         <div class="ev-body">
-          <div class="ev-desc" style="font-size:clamp(24px,3vw,30px);font-weight:900;color:#241c19;white-space:nowrap">멤버십 등록 시</div>
+          <div class="ev-desc" style="font-size:clamp(26px,3vw,34px);font-weight:900;color:#241c19;white-space:nowrap">멤버십 등록 시</div>
           <div class="ev-big">운동복 + 락카</div>
           <div class="ev-sub" style="font-size:clamp(34px,4.6vw,44px);font-weight:900;color:#c8312a;line-height:1.1;margin-top:10px">무료증정!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev-card hot wide">
+      <div class="ev-head"><span>④ EVENT</span></div>
+      <span class="ev-best">NEW</span>
+      <div class="ev-body">
+        <div class="ev-pack">
+          <div class="a">스타터 패키지</div>
+          <div class="b">1:1 PT <em>3회</em></div>
+        </div>
+        <div class="ev-pricebox">
+          <div class="t">단돈</div>
+          <div class="ev-price">99,000<small>원!</small></div>
         </div>
       </div>
     </div>
